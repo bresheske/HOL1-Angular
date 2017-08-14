@@ -1,0 +1,9 @@
+<div>
+  <p>{{model.setup}}</p>
+  <strong>{{model.punchline}}</strong>
+  <br>
+  <p>
+    <span>Lols: </span><app-upvote [vote]="model.lols" (onIncrement)="lolsUpvoted($event)" ></app-upvote>
+    <span>Groans: </span><app-upvote [vote]="model.groans" (onIncrement)="groansUpvoted($event)" ></app-upvote>
+  </p>
+</div>

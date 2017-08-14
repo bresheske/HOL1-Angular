@@ -1,0 +1,9 @@
+<input type="text" placeholder="Search..." [(ngModel)]="search" >
+<p>
+  <i *ngIf="(jokes | jokeFilter:search).length == 0">
+    sorry, no jokes matched your search filter.
+  </i>
+</p>
+<div *ngFor="let joke of jokes | jokeFilter:search">
+    <app-joke (click)="showJoke(joke.id)" [model]="joke"></app-joke>
+</div>
